@@ -1,0 +1,3 @@
+*.pub
+jimmyscar/node_modules
+jimmyscar/node_modules/*
