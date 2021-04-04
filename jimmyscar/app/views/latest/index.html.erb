@@ -2,57 +2,68 @@
 
 <span>Latest Tier List</span>
 <h1></h1>
+<%= "To change the view, enter this line in the console below: \"toggle_songs_view\".\nThen, reload the page. I didn't feel like doing the AJAX for this mockup."%>
+<h1></h1>
+<% if $listing_songs %>
+    <span> S Tier </span>
+    <div class="content">
+        <%= @stier.each do |song| %>
+            <%= "Name: #{song.title}"%>
+            <%= "Artist: #{song.artist}"%>
+            <%= "Owner: #{song.owner}"%>
+        <%end%>
+    </div>
 
-<button type="button" class="collapsible"> S Tier </button>
-<div class="content">
-    <%= @stier.each do |song| %>
-        <%= "Name: #{song.title}"%>
-        <%= "Artist: #{song.artist}"%>
-        <%= "Owner: #{song.owner}"%>
-    <%end%>
-</div>
+    <span> A Tier </span>
+    <div class="content">
+        <%= @atier.each do |song| %>
+            <%= "Name: #{song.title}"%>
+            <%= "Artist: #{song.artist}"%>
+            <%= "Owner: #{song.owner}"%>
+        <%end%>
+    </div>
 
-<button type="button" class="collapsible"> A Tier </button>
-<div class="content">
-    <%= @atier.each do |song| %>
-        <%= "Name: #{song.title}"%>
-        <%= "Artist: #{song.artist}"%>
-        <%= "Owner: #{song.owner}"%>
-    <%end%>
-</div>
+    <span> B Tier </span>
+    <div class="content">
+        <%= @btier.each do |song| %>
+            <%= "Name: #{song.title}"%>
+            <%= "Artist: #{song.artist}"%>
+            <%= "Owner: #{song.owner}"%>
+        <%end%>
+    </div>
 
-<button type="button" class="collapsible"> B Tier </button>
-<div class="content">
-    <%= @btier.each do |song| %>
-        <%= "Name: #{song.title}"%>
-        <%= "Artist: #{song.artist}"%>
-        <%= "Owner: #{song.owner}"%>
-    <%end%>
-</div>
+    <span> C Tier </span>
+    <div class="content">
+        <%= @ctier.each do |song| %>
+            <%= "Name: #{song.title}"%>
+            <%= "Artist: #{song.artist}"%>
+            <%= "Owner: #{song.owner}"%>
+        <%end%>
+    </div>
 
-<button type="button" class="collapsible"> C Tier </button>
-<div class="content">
-    <%= @ctier.each do |song| %>
-        <%= "Name: #{song.title}"%>
-        <%= "Artist: #{song.artist}"%>
-        <%= "Owner: #{song.owner}"%>
-    <%end%>
-</div>
+    <span> D Tier </span>
+    <div class="content">
+        <%= @dtier.each do |song| %>
+            <%= "Name: #{song.title}"%>
+            <%= "Artist: #{song.artist}"%>
+            <%= "Owner: #{song.owner}"%>
+        <%end%>
+    </div>
 
-<button type="button" class="collapsible"> D Tier </button>
-<div class="content">
-    <%= @dtier.each do |song| %>
-        <%= "Name: #{song.title}"%>
-        <%= "Artist: #{song.artist}"%>
-        <%= "Owner: #{song.owner}"%>
-    <%end%>
-</div>
-
-<button type="button" class="collapsible"> F Tier </button>
-<div class="content">
-    <%= @ftier.each do |song| %>
-        <%= "Name: #{song.title}"%>
-        <%= "Artist: #{song.artist}"%>
-        <%= "Owner: #{song.owner}"%>
-    <%end%>
-</div>
+    <span>F Tier </span>
+    <div class="content">
+        <%= @ftier.each do |song| %>
+            <%= "Name: #{song.title}"%>
+            <%= "Artist: #{song.artist}"%>
+            <%= "Owner: #{song.owner}"%>
+        <%end%>
+    </div>
+<%else%>
+    <div class="content">
+        <%= @people.each do |person| %>
+            <%= "Name: #{person.name}"%>
+            <%= "Points: #{person.points}"%>
+        <%end%>
+    </div>
+<%end%>
+<% console %>
