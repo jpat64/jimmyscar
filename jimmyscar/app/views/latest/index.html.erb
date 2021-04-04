@@ -1,0 +1,58 @@
+<%= render 'components/navbar' %>
+
+<span>Latest Tier List</span>
+<h1></h1>
+
+<button type="button" class="collapsible"> S Tier </button>
+<div class="content">
+    <%= @stier.each do |song| %>
+        <%= "Name: #{song.title}"%>
+        <%= "Artist: #{song.artist}"%>
+        <%= "Owner: #{song.owner}"%>
+    <%end%>
+</div>
+
+<button type="button" class="collapsible"> A Tier </button>
+<div class="content">
+    <%= @atier.each do |song| %>
+        <%= "Name: #{song.title}"%>
+        <%= "Artist: #{song.artist}"%>
+        <%= "Owner: #{song.owner}"%>
+    <%end%>
+</div>
+
+<button type="button" class="collapsible"> B Tier </button>
+<div class="content">
+    <%= @btier.each do |song| %>
+        <%= "Name: #{song.title}"%>
+        <%= "Artist: #{song.artist}"%>
+        <%= "Owner: #{song.owner}"%>
+    <%end%>
+</div>
+
+<button type="button" class="collapsible"> C Tier </button>
+<div class="content">
+    <%= @ctier.each do |song| %>
+        <%= "Name: #{song.title}"%>
+        <%= "Artist: #{song.artist}"%>
+        <%= "Owner: #{song.owner}"%>
+    <%end%>
+</div>
+
+<button type="button" class="collapsible"> D Tier </button>
+<div class="content">
+    <%= @dtier.each do |song| %>
+        <%= "Name: #{song.title}"%>
+        <%= "Artist: #{song.artist}"%>
+        <%= "Owner: #{song.owner}"%>
+    <%end%>
+</div>
+
+<button type="button" class="collapsible"> F Tier </button>
+<div class="content">
+    <%= @ftier.each do |song| %>
+        <%= "Name: #{song.title}"%>
+        <%= "Artist: #{song.artist}"%>
+        <%= "Owner: #{song.owner}"%>
+    <%end%>
+</div>
