@@ -1,4 +1,5 @@
 ## Welcome to Jimmy's Car!
+
 ### (Website Edition)
 
 This repo has been made to help facilitate building a website for the Jimmy's Car playlist/game/thing.
@@ -9,9 +10,39 @@ I use MySql to interact with the database for this app since that's the db-inter
 
 The `wireframes` folder contains a series of drawn-out plans for pages in the app. As of the last version of `README.md`, the app does not implement the given wireframes.
 
-Run the app locally on your own computer once Rails is set up by using the command:
+To run the app locally for the first time on your own computer once Rails is set up...
+
+1. Install gems:
+
 ```
-    > rails s
+> bundle install
+```
+
+2. Install webpacker dependencies:
+
+```
+> rails webpacker:install
+```
+
+3. Create/migrate database(s):
+
+```
+> rake db:create
+> rake db:migrate
+```
+
+4. Start MySql server\*:
+
+```
+> mysql.server start
+```
+
+6. Finally, run the app:
+
+```
+> rails s
 ```
 
 Then, navigate to `localhost:3000` to reach the app. As of the last version of `README.md`, the app does not have a reachable url on the greater Internet.
+
+\*Note: don't forget to stop the MySql server once you are done by running `mysql.server stop`!
