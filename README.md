@@ -24,17 +24,17 @@ To run the app locally for the first time on your own computer once Rails is set
 > rails webpacker:install
 ```
 
-3. Create/migrate database(s):
+3. Start MySql server\*:
+
+```
+> mysql.server start
+```
+
+4. Create/migrate database(s):
 
 ```
 > rake db:create
 > rake db:migrate
-```
-
-4. Start MySql server\*:
-
-```
-> mysql.server start
 ```
 
 6. Finally, run the app:
