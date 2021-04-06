@@ -12,25 +12,27 @@ The `wireframes` folder contains a series of drawn-out plans for pages in the ap
 
 To run the app locally for the first time on your own computer once Rails is set up...
 
-1. Install gems:
+1. `cd` into the `jimmyscar` directory
+
+2. Install gems:
 
 ```
 > bundle install
 ```
 
-2. Install webpacker dependencies:
+3. Install webpacker dependencies:
 
 ```
 > rails webpacker:install
 ```
 
-3. Start MySql server\*:
+4. Start MySql server\*:
 
 ```
 > mysql.server start
 ```
 
-4. Create/migrate database(s):
+5. Create/migrate database(s):
 
 ```
 > rake db:create
