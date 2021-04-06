@@ -27,15 +27,6 @@ body {
   height: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: $grey;
-}
-
-a:hover {
-  color: $secondary-color;
-}
-
 h1 {
   font-family: "Paytone One", sans-serif;
 }
@@ -45,6 +36,17 @@ h1 {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.05rem;
+}
+
+.home a {
+  text-decoration: none;
+  color: $grey;
+  transition: 0.25s ease-in-out;
+}
+
+.home a:hover {
+  color: $secondary-color;
+  letter-spacing: 0.075rem;
 }
 
 .navbar {
