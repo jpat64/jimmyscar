@@ -10,8 +10,7 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
     if @person.save
-      @person = Person.all
-      render :index
+      render :show, params: {id: @person.id}
     else
       render :new
     end
@@ -31,6 +30,6 @@ class PeopleController < ApplicationController
     if @person.blank?
       @person = Person.create(person_params)
     end
-    render :show[@person.id]
+    render :show, params: {id: @person.id}
   end
 end
