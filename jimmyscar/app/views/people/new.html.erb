@@ -1,4 +1,15 @@
 <h1>People#new</h1>
 <p>Find me in app/views/people/new.html.erb</p>
 
-<%= @person.name =%>
+<%= form_for @person do |f| %>
+    <%= f.label 'Name' %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label 'Password' %><br>
+    <%= f.text_field :password_hash %><br>
+
+    <%= f.label 'Profile Pic Link' %><br>
+    <%= f.text_field :profile_pic_link %><br>
+
+    <%= f.submit "Submit Person" %>
+<% end %>

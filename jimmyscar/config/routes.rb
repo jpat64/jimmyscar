@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :profile, :only => [:index, :show]
   resources :swap, :only => [:index]
   resources :hall, :only => [:index, :show]
-  resources :people, :only => [:show, :new, :create]
+  resources :people, :only => [:index, :show, :new, :create]
 end

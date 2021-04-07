@@ -1,4 +1,12 @@
+<h1>People#index</h1>
+
 <% @person.each do |person| %>
-    <%= @person.name %>
+    <%= person.name %>
+    <%=", "%>
+    <%= person.id %>
+    <%=", "%>
+    <%= person.password_hash %>
+    <%=", "%>
+    <%= person.profile_pic_link %>
     <h1></h1>
 <% end %>
