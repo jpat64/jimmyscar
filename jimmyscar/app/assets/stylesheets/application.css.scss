@@ -14,21 +14,47 @@
  *= require_self
  */
 
-.home{
-   position: fixed;
-   margin: auto;
-   text-align: center;
-   width: 100%;
-   height: 100%;
-   padding-top: 200px;
+$primary-color: #455875;
+$secondary-color: #93bca1;
+$grey: #989898;
+
+* {
+  font-family: "Spartan", sans-serif;
 }
 
-.navbar{
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
+html,
+body {
+  height: 100%;
 }
 
-.navbaritem{
-   display: inline;
+h1 {
+  font-family: "Paytone One", sans-serif;
+}
+
+.home {
+  width: 30%;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+}
+
+.home a {
+  text-decoration: none;
+  color: $grey;
+  transition: 0.25s ease-in-out;
+}
+
+.home a:hover {
+  color: $secondary-color;
+  letter-spacing: 0.075rem;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbaritem {
+  display: inline;
 }
