@@ -1,6 +1,8 @@
+<%= render 'components/navbar' %>
+
 <h1>People#show</h1>
 <p>Find me in app/views/people/show.html.erb</p>
 
 <%= @person.name %>
 <%= @person.password_hash %>
-<%= image_tag(root_url + @person.profile_pic_link, :alt => "Person Image", size:"100x100") %>
+<%= image_tag(root_url + @person.profile_pic_link, :alt => "Person Image", size:"100x100") unless @person.profile_pic_link.blank? %>

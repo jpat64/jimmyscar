@@ -1,3 +1,5 @@
+<%= render 'components/navbar' %>
+
 <h1>People#index</h1>
 
 <% @person.each do |person| %>
@@ -8,5 +10,7 @@
     <%= person.password_hash %>
     <%=", "%>
     <%= person.profile_pic_link %>
+    <br>
+    <%= link_to "Profile", "/people/" + person.id.to_s %>
     <h1></h1>
 <% end %>
