@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_31_195440) do
+ActiveRecord::Schema.define(version: 2021_04_07_140025) do
 
-  create_table "people", charset: "utf8mb4", force: :cascade do |t|
+  create_table "editions", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
-    t.string "hash", null: false
+    t.integer "sequence", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "people", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "cookie"
+    t.string "password_hash"
+    t.string "profile_pic_link"
   end
 
 end
