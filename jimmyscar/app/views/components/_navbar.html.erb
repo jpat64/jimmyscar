@@ -1,10 +1,17 @@
-<div>
-    <ul class="navbar">
-        <li class="navbaritem"><a href='/home'> JC </a></li>
-        <li class="navbaritem"><a href='/latest'> Latest </a></li>
-        <li class="navbaritem"><a href='/swap'> Make a Swap </a></li>
-        <li class="navbaritem"><a href='/history'> Tier List History </a></li>
-        <li class="navbaritem"><a href='/hall'> Tier List Hall of Fame </a></li>
-        <li class="navbaritem"><a href='/people'> Profiles </a></li>
-    </ul>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/home">
+    <%= image_tag("jimmyscar_small_logo.svg", :size => "55x55")%>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/latest">Latest</a>
+      <a class="nav-item nav-link" href="/swap">Make a Swap</a>
+      <a class="nav-item nav-link" href="/history">Past Tier Lists</a>
+      <a class="nav-item nav-link" href="/hall">Hall of Fame</a>
+      <a class="nav-item nav-link" href="/people">Profiles</a>
+    </div>
+  </div>
+</nav>
