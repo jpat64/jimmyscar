@@ -1,69 +1,76 @@
 <%= render 'components/navbar' %>
 
-<span>Latest Tier List</span>
-<h1></h1>
-<%= "To change the view, enter this line in the console below: \"toggle_songs_view\".\nThen, reload the page. I didn't feel like doing the AJAX for this mockup."%>
-<h1></h1>
-<% if $listing_songs %>
-    <span> S Tier </span>
-    <div class="content">
-        <%= @stier.each do |song| %>
-            <%= "Name: #{song.title}"%>
-            <%= "Artist: #{song.artist}"%>
-            <%= "Owner: #{song.owner}"%>
-        <%end%>
-    </div>
+<div class="m-5">
+    <h1>latest tier list</h1>
+    <p> To change the view, enter this line in the console below: "toggle_songs_points".Then, reload the page. I didn't feel like doing the AJAX for this mockup. </p>
 
-    <span> A Tier </span>
-    <div class="content">
-        <%= @atier.each do |song| %>
-            <%= "Name: #{song.title}"%>
-            <%= "Artist: #{song.artist}"%>
-            <%= "Owner: #{song.owner}"%>
-        <%end%>
-    </div>
+    <div class="mt-5 mx-3">
+        <% if $listing_songs %>
+            <div class="mb-5">
+                <h2><span> S Tier </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @stier.each do |song| %>
+                        <%= render partial: "components/song_card", locals: {song: song} %>
+                    <%end%>
+                </div>
+            </div>
 
-    <span> B Tier </span>
-    <div class="content">
-        <%= @btier.each do |song| %>
-            <%= "Name: #{song.title}"%>
-            <%= "Artist: #{song.artist}"%>
-            <%= "Owner: #{song.owner}"%>
-        <%end%>
-    </div>
+            <div class="mb-5">
+                <h2><span> A Tier </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @atier.each do |song| %>
+                        <%= render partial: "components/song_card", locals: {song: song} %>
+                    <%end%>
+                </div>
+            </div>
 
-    <span> C Tier </span>
-    <div class="content">
-        <%= @ctier.each do |song| %>
-            <%= "Name: #{song.title}"%>
-            <%= "Artist: #{song.artist}"%>
-            <%= "Owner: #{song.owner}"%>
-        <%end%>
-    </div>
+            <div class="mb-5">
+                <h2><span> B Tier </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @btier.each do |song| %>
+                        <%= render partial: "components/song_card", locals: {song: song} %>
+                    <%end%>
+                </div>
+            </div>
 
-    <span> D Tier </span>
-    <div class="content">
-        <%= @dtier.each do |song| %>
-            <%= "Name: #{song.title}"%>
-            <%= "Artist: #{song.artist}"%>
-            <%= "Owner: #{song.owner}"%>
-        <%end%>
-    </div>
+            <div class="mb-5">
+                <h2><span> C Tier </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @ctier.each do |song| %>
+                        <%= render partial: "components/song_card", locals: {song: song} %>
+                    <%end%>
+                </div>
+            </div>
 
-    <span>F Tier </span>
-    <div class="content">
-        <%= @ftier.each do |song| %>
-            <%= "Name: #{song.title}"%>
-            <%= "Artist: #{song.artist}"%>
-            <%= "Owner: #{song.owner}"%>
+            <div class="mb-5">
+                <h2><span> D Tier </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @dtier.each do |song| %>
+                        <%= render partial: "components/song_card", locals: {song: song} %>
+                    <%end%>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <h2><span> F Tier </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @ftier.each do |song| %>
+                        <%= render partial: "components/song_card", locals: {song: song} %>
+                    <%end%>
+                </div>
+            </div>
+
+        <%else%>
+            <div class="mb-5">
+                <h2><span> People </span></h2>
+                <div class="d-flex flex-column align-items-center">
+                    <% @people.each do |person| %>
+                        <%= render partial: "components/person_card", locals: {person: person} %>
+                    <%end%>
+                </div>
+            </div>
+        </div>
         <%end%>
     </div>
-<%else%>
-    <div class="content">
-        <%= @people.each do |person| %>
-            <%= "Name: #{person.name}"%>
-            <%= "Points: #{person.points}"%>
-        <%end%>
-    </div>
-<%end%>
+</div>
 <% console %>
