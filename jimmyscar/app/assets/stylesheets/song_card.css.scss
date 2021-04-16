@@ -1,0 +1,52 @@
+$primary-color: #455875;
+$secondary-color: #93bca1;
+$grey: #989898;
+
+$primary-font: "Paytone One", sans-serif;
+$secondary-font: "Spartan", sans-serif;
+
+h1 {
+  color: $primary-color;
+}
+
+h2 {
+  color: $grey;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.075rem;
+  border-bottom: 1px solid $grey;
+  line-height: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+h2 span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+p {
+  margin: 0;
+  color: $grey;
+}
+
+.card {
+  width: 75%;
+  border-radius: 30px;
+  border-width: 0;
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+
+.emphasis {
+  color: $secondary-color;
+  font-family: $primary-font;
+}
+
+.emphasis2 {
+  color: $primary-color;
+}
+
+.emphasis3 {
+  color: $secondary-color;
+  font-weight: bold;
+}
