@@ -7,6 +7,9 @@ services:
         command: --default-authentication-plugin=mysql_native_password
         environment:
             MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: jimmyscar_development
+            MYSQL_USER: user_dev
+            MYSQL_PASSWORD: password
         ports:
             - "3307:3306"
     rails:
@@ -21,6 +24,6 @@ services:
         links:
             - db
         environment:
-            DB_USER: root
+            DB_USER: user_dev
             DB_PASSWORD: password
             DB_HOST: db
