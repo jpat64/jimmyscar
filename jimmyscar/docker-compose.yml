@@ -27,3 +27,4 @@ services:
             DB_USER: user_dev
             DB_PASSWORD: password
             DB_HOST: db
+            RAILS_ENV: development
