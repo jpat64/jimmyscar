@@ -4,6 +4,6 @@ RUN mkdir /app
 WORKDIR /app
 RUN rm -f /app/tmp/pids/server.pid
 ADD Gemfile /app/Gemfile
-RUN bundle
+ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install 
 ADD . /app
